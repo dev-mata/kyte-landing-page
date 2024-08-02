@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- swiper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+              "gradient-conic":
+                "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+            },
+            colors: {
+              "kt-purple": "#AA27F2",
+              "kt-purple-100": "#F4E5FD",
+              "kt-gray": "#F9F9F9",
+            },
+            keyframes: {
+              bounceIn: {
+                "0%, 20%, 40%, 60%, 80%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-30px)" },
+              },
+            },
+            animation: {
+              "bounce-in": "bounceIn 1s ease-in-out",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="scroll-smooth">
+    <!-- heading -->
+    <div
+      class="bg-cover bg-center min-h-screen"
+      style="background-image: url('./assets/images/hero-bg.svg')"
+    >
+      <header class="py-8 text-black">
+        <div
+          class="container mx-auto flex justify-between items-center px-4 md:mb-4 poppins-regular"
+        >
+          <div class="flex items-center">
+            <div><img src="./assets/images/kyte-logo.png" width="140px" /></div>
+          </div>
+          <nav class="hidden md:block">
+            <ul class="flex space-x-4 justify-center">
+              <li>
+                <a class="p-2 rounded-xl"> Home </a>
+              </li>
+              <li>
+                <a class="p-2 rounded-xl"> About </a>
+              </li>
+              <li>
+                <a class="p-2 rounded-xl"> Services </a>
+              </li>
+              <li>
+                <a class="p-2 rounded-xl"> Portfolio </a>
+              </li>
+              <li>
+                <a class="p-2 rounded-xl"> Contact </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="flex items-center">
+            <button
+              class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white"
+            >
+              Connect with Us
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section
+        class="flex items-center justify-center text-black poppins-regular h-screen"
+      >
+        <div
+          class="text-center max-w-4xl bg-white bg-opacity-10 p-4 md:p-8 rounded -mt-[20rem]"
+        >
+          <h1
+            class="text-4xl md:text-6xl mb-4 poppins-semibold text-center relative"
+          >
+            We Transform Ideas <br />
+            <span class="inline-flex items-center justify-center">
+              Into Conversions
+            </span>
+            <!-- <img src="./assets/images/kite.svg" class="ml-2 w-14 h-14 inline-block" />? -->
+          </h1>
+
+          <p class="mb-6 md:px-4 sm:px-10 md:px-20 mt-8 leading-6">
+            Welcome to Kyte Digital Marketing Agency, where we combine our
+            expertise in social media marketing, SEO, and paid ads to help
+            businesses achieve tangible results. Fly high with Kyte!
+          </p>
+          <button
+            class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white"
+          >
+            Let’s Build Now!
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- business growth -->
+    <section class="-mt-[20rem] mb-20 md:mb-[160px] p-4 md:p-0">
+      <div class="text-black text-center">
+        <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium  p-2">
+          How our digital marketing services
+          <div class="mt-2 text-gray-400">
+            <span>drive business growth</span>
+          </div>
+        </h1>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="grid grid-cols-12 gap-4 mt-12 w-full max-w-screen-xl">
+          <div class="flex col-span-12 md:col-span-6 bg-kt-gray rounded-xl">
+            <div class="p-2 shrink-0 hidden md:block">
+              <img
+                src="./assets/images/market-man.png"
+                style="height: 400px; width: 230px"
+              />
+            </div>
+
+            <div class="flex ml-3 flex-col justify-between space-y-4 flex-grow">
+              <div>
+                <img src="./assets/images/market-man-m.png" class="py-2 block md:hidden" />
+                <div
+                  class="p-3 mt-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg hidden md:block"
+                >
+                  <div class="">
+                    <img src="./assets/images/m3.svg" />
+                  </div>
+                </div>
+               
+                <div class="flex mt-6 md:mt-20 space-x-8">
+                  <div>
+                    <h2 class="text-3xl poppins-semibold">+199 %</h2>
+                    <p class="text-sm text-gray-400">
+                      Top 5 Keywords<br />Rankings
+                    </p>
+                  </div>
+                  <div>
+                    <h2 class="text-3xl poppins-semibold">+268 %</h2>
+                    <p class="text-sm text-gray-400">Monthly Leads</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pb-10">
+                <h3 class="poppins-semibold text-lg mb-2">Discover</h3>
+                <p class="poppins-regular text-gray-500">
+                  We dive deep into your business goals, audience, and industry
+                  to lay a solid foundation for success.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col"
+          >
+            <div
+              class="p-3 m-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg"
+            >
+              <div>
+                <img src="./assets/images/m1.svg" />
+              </div>
+            </div>
+
+            <div class="flex-grow"></div>
+
+            <div class="pb-10 p-3">
+              <h3 class="poppins-semibold text-lg mb-2">Create</h3>
+              <p class="poppins-regular text-gray-500">
+                Our team of experts crafts compelling content, captivating
+                designs, and effective strategies to boost your brand.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col"
+          >
+            <div
+              class="p-3 m-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg"
+            >
+              <div>
+                <img src="./assets/images/m2.svg" />
+              </div>
+            </div>
+
+            <div class="flex-grow"></div>
+
+            <div class="pb-10 p-3">
+              <h3 class="poppins-semibold text-lg mb-2">Convert</h3>
+              <p class="poppins-regular text-gray-500">
+                By implementing data-driven techniques and continuous
+                optimization, we maximize conversions and drive growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- business growth -->
+
+    <!-- campaigns & projects -->
+    <section class="sec-campaign p-4 md:p-0 ">
+      <div class="flex justify-center">
+        <div class="grid grid-col mt-12 w-full max-w-screen-xl">
+          <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium">
+            When people
+            <div class="mt-2 text-gray-400"><span>do work with us</span></div>
+          </h1>
+          <p>
+            Check out some of our most recent successful campaigns and projects.
+          </p>
+        </div>
+      </div>
+
+ 
+
+      
+      <div class="flex justify-center">
+        <div class="swiper mySwiper w-full max-w-screen-xl">
+          <div class="swiper-wrapper">
+       
+            <div class="swiper-slide">
+              <div class="flex justify-center">
+                <div class="relative mt-12 w-full max-w-screen-xl rounded-[20px] md:rounded-[40px]">
+                  <img src="./assets/images/camp-1.png" class="w-full h-auto rounded-[40px]" />
+                  <div class="absolute inset-0 flex flex-col items-center justify-center text-left md:text-center text-white p-4">
+                    <h1 class="text-4xl poppins-semibold mb-4 mt-2 md:mt-60">JETOUR LLC</h1>
+                    <p class="mb-4 px-2 md:px-[250px]">Cosmedent Clinic is committed to providing patients with comprehensive, quality and compassionate dental care treatment.</p>
+                  </div>
+                  <button class="absolute top-4 left-4 bg-black text-white py-1 md:py-2 px-2 md:px-6 rounded-xl md:rounded-full h-10 md:h-[48px] hover:bg-gray-700 hover:text-white text-xs md:text-sm hidden md:block">Visit Site</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex justify-center">
+                <div class="relative mt-12 w-full max-w-screen-xl rounded-[20px] md:rounded-[40px]">
+                  <img src="./assets/images/camp-1.png" class="w-full h-auto rounded-[40px]" />
+                  <div class="absolute inset-0 flex flex-col items-center justify-center text-left md:text-center text-white p-4">
+                    <h1 class="text-4xl poppins-semibold mb-4 mt-2 md:mt-60">JETOUR LLC</h1>
+                    <p class="mb-4 px-2 md:px-[250px]">Cosmedent Clinic is committed to providing patients with comprehensive, quality and compassionate dental care treatment.</p>
+                  </div>
+                  <button class="absolute top-4 left-4 bg-black text-white py-1 md:py-2 px-2 md:px-6 rounded-xl md:rounded-full h-10 md:h-[48px] hover:bg-gray-700 hover:text-white text-xs md:text-sm hidden md:block">Visit Site</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- campaigns & projects -->
+
+
+    <section class="my-6 md:my-40"  style="background-image: url('./assets/images/hero-bg.svg')">
+      
+      <div class="relative flex justify-center">
+        <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
+          <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium">
+            Our services to result 
+            <div class="mt-2 text-gray-400"><span>driven marketing agency</span></div>
+          </h1>
+          <p>
+            We offer comprehensive digital marketing solutions that deliver measurable results.
+          </p>
+        </div>
+      
+        <!-- <button
+          class="md:absolute bottom-0 right-48 mb-4 mr-4 bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white"
+        >
+          Let’s Build Now!
+        </button> -->
+      </div>
+
+
+      <div class="relative flex justify-center">
+        <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
+        
+          <div class="grid md:grid-cols-3 gap-4">
+
+         
+
+            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+                <img src="./assets/images/services/1.svg" />
+              </div>
+            
+              <h3 class="poppins-semibold text-lg mt-14 mb-4">Social Media Marketing</h3>
+              <p class="mb-2">Engage and connect with your target audience through strategic social media marketing campaigns.</p>
+            </div>
+
+            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+                <img src="./assets/images/services/2.svg" />
+              </div>
+            
+              <h3 class="poppins-semibold text-lg mt-14 mb-4">Search Engine Optimization</h3>
+              <p class="mb-2">Improve your website’s visibility and organic search rankings to drive more traffic and leads.</p>
+            </div>
+
+            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+                <img src="./assets/images/services/3.svg" />
+              </div>
+            
+              <h3 class="poppins-semibold text-lg mt-14 mb-4">Paid Ads (PPC) Management</h3>
+              <p class="mb-2">Maximize your ROI through our data-driven PPC campaigns on various platforms.</p>
+            </div>
+
+            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+                <img src="./assets/images/services/4.svg" />
+              </div>
+            
+              <h3 class="poppins-semibold text-lg mt-14 mb-4">Content Creation</h3>
+              <p class="mb-2">Create compelling and engaging content to attract and retain your target audience.</p>
+            </div>
+
+            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+                <img src="./assets/images/services/5.svg" />
+              </div>
+            
+              <h3 class="poppins-semibold text-lg mt-14 mb-4">Website Design & Development</h3>
+              <p class="mb-2">Craft a visually appealing and user-friendly website that reflects your brand and drives conversions.</p>
+            </div>
+
+            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+                <img src="./assets/images/services/6.svg" />
+              </div>
+            
+              <h3 class="poppins-semibold text-lg mt-14 mb-4">Email Marketing</h3>
+              <p class="mb-2">Leverage the power of email marketing to nurture leads and drive repeat business.</p>
+            </div>
+      
+            
+          
+        
+          </div>
+
+        </div>
+      
+      
+      </div>
+   
+    </section>
+
+
+
+
+    <section class="-mt-10 ">
+      <div class=" flex justify-center">
+        <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
+          <h1 class="text-3xl md:text-[40px] mb-4 poppins-semibold leading-relaxed">
+            Kyte Digital Marketing Agency is a team of experienced professionals based in Dubai. With years of industry expertise, we began our journey helping businesses of all sizes achieve online success.
+          
+          </h1>
+       
+        </div>
+   
+      </div>
+    </section>
+
+    <section class="my-10 p-2 md:-p-0">
+      <div class="flex justify-center">
+        <div class="grid grid-col mt-12 w-full max-w-screen-xl bg-gray-100 rounded-xl">
+          <div class="md:flex">
+            <div class="bg-white m-2 p-10 rounded-lg">
+              <img src="./assets/images/services/partners/emaar.png" height="18px" width="84px" class="mt-10" />
+              <p class="poppins-regular-italic text-lg mt-10">"“We  went from 120 to 500 major clients in just 3 months.
+                Thanks for the great management of Kyte Digital.”</p>
+
+                <p class="poppins-bold mt-14">Amit Jain</p>
+                <p class="mb-10">CEO of EMAAR Properties</p>
+            </div>
+
+            <div class="m-2 items-center md:items-left justify-center mobile-center">
+              <h3 class="poppins-semibold text-3xl mt-10">Where we <br> are now.</h3>
+            
+              <div class="flex mt-10">
+                <p class="text-sm">Reviews 255,000 <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="10" height="10" color="#00B67A" fill="#00B67A" class="inline-flex">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg></span> Excellent</p>
+              </div>
+            
+              <img src="./assets/images/trustpilot.png" height="110px" width="226px" />
+              <p class="text-xs poppins-medium p-1 rounded-lg bg-[#D4EFE6] mt-1 px-2 inline-block">VERIFIED COMPANY</p>
+              <br>
+              <button class="mt-10 mb-4 mr-4 bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white">
+                GET STARTED
+              </button>
+            </div>
+
+          </div>
+         
+        </div>
+      </div>
+
+      <div class=" flex justify-center">
+        <div class="grid grid-col mt-2 w-full max-w-screen-xl px-4">
+          <p>
+            Trusted by MENA’s Top Companies          
+          </p>
+       
+        </div>
+   
+      </div>
+
+    </section>
+
+    <section class="mt-40 mb-20 p-2 md:p-0">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium px-2 md:px-10">
+          We are helping to grow more revenue
+          <div class="mt-2 text-gray-400">
+            <span>for all those partners</span>
+          </div>
+        </h1>
+        <p>We offer comprehensive digital marketing solutions that deliver measurable results.</p>
+   
+        <div class="md:inline-flex sm:grid sm:grid-cols-2 items-center justify-center mt-10">
+          <div class="grid grid-cols-2 md:grid-cols-6 gap-4 items-center justify-center">
+            <div class="flex items-center justify-center">
+              <img src="./assets/images/services/partners/image 10.png" class="w-auto h-[75px] mx-6" />
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="./assets/images/services/partners/image 5.png" class="w-auto h-[24px] mx-6" />
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="./assets/images/services/partners/image 6.png" class="w-auto h-[58px] mx-6" />
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="./assets/images/services/partners/image 7.png" class="w-auto h-[52px] mx-6" />
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="./assets/images/services/partners/image 8.png" class="w-auto h-[36px] mx-6" />
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="./assets/images/services/partners/image 9.png" class="w-auto h-[72px] mx-6" />
+            </div>
+          </div>
+        </div>
+        
+        
+
+      </div>
+
+     
+    </section>
+    <!-- class="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-50" -->
+    <footer class="py-6 dark:bg-kt-gray dark:text-gray-900 mt-10">
+      <div class="container px-6 mt-6 mx-auto space-y-6 divide-y dark:divide-gray-600 md:space-y-12 divide-opacity-50">
+        <div class="grid grid-cols-12">
+          <div class="pb-6 col-span-full md:pb-0 md:col-span-6">
+            <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 md:justify-start">
+              <div class="flex">
+              <img src="./assets/images/kyte-logo.png"  width="140px"/>
+              </div>
+            </a>
+          </div>
+          <div class="col-span-6 md:text-left md:col-span-3">
+            <p class="pb-1">Category</p>
+            <ul class="text-sm">
+              <li class="mb-2">
+                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Home</a>
+              </li>
+              <li class="mb-2">
+                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">About</a>
+              </li>
+              <li class="mb-2">
+                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Services</a>
+              </li>
+              <li class="mb-2">
+                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Portfolio</a>
+              </li>
+              <li class="mb-2">
+                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-6 md:text-left md:col-span-3">
+            <p class="pb-2">Contacts</p>
+            <ul class="text-sm">
+              <li class="mb-2">
+                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600">Una Building, Townsquare Nshama, Al Qudra,
+                  Dubai, UAE</a>
+              </li>
+              <li class="mb-2">
+                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600">+971 52 426 7905</a>
+              </li>
+              <li class="mb-2">
+                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600">hello@kyte.ae</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+        <div class="grid justify-center pt-6 lg:justify-between">
+          <div class="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
+            <span>Copyright © 2024 kyte Digital Marketing</span>
+            <a rel="noopener noreferrer" href="#">
+              <span>Privacy policy</span>
+            </a>
+            <a rel="noopener noreferrer" href="#">
+              <span>Terms of service</span>
+            </a>
+          </div>
+          <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
+            <a rel="noopener noreferrer" href="#" title="Email" class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-kt-purple dark:text-gray-50">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+              </svg>
+            </a>
+            <a rel="noopener noreferrer" href="#" title="Twitter" class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-kt-purple dark:text-gray-50">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="w-5 h-5">
+                <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
+              </svg>
+            </a>
+            <a rel="noopener noreferrer" href="#" title="GitHub" class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-kt-purple dark:text-gray-50">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#fff" fill="none">
+                <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scroll-to-top"
+        onclick="scrollToTop()"
+        class="scroll-to-top fixed bottom-6 right-6
+                   bg-white text-black rounded-lg
+                   transition duration-300 hover:bg-gray-100 
+                   hover:text-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#000000" fill="none">
+            <path d="M9.5 10.5C9.99153 9.9943 11.2998 8 12 8M14.5 10.5C14.0085 9.9943 12.7002 8 12 8M12 8V16" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1" />
+        </svg>
+    </button>
+
+    <!-- HERO END -->
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesOffsetBefore: 5,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        // when window width is <= 640px (mobile view)
+        640: {
+          slidesPerView: 1.2,
+        },
+        // you can add more breakpoints if needed
+      },
+    });
+  </script>
+
+<script>
+  const scrollToTopButton = document.getElementById('scroll-to-top');
+
+  // Show button when user scrolls down
+  window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+          scrollToTopButton.style.display = 'block';
+      } else {
+          scrollToTopButton.style.display = 'none';
+      }
+  });
+
+  // Smooth scroll to top
+  function scrollToTop() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  }
+</script>
+</html>
