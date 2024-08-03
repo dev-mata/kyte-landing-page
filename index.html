@@ -20,8 +20,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <script>document.documentElement.classList.add('js')</script>
-    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+
 
 
     <script>
@@ -155,7 +154,7 @@
         id="home"
       >
         <div
-          class="text-center max-w-4xl bg-white bg-opacity-10 p-4 md:p-8 rounded -mt-[20rem] delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0"
+          class="text-center max-w-4xl bg-white bg-opacity-10 p-4 md:p-8 rounded -mt-[20rem] duration-[1000ms] taos:opacity-0"
           data-taos-offset="500"
         >
           <h1
@@ -239,7 +238,8 @@
           </div>
 
           <div
-            class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col"
+            class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0"
+            data-taos-offset="400"
           >
             <div
               class="p-3 m-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg"
@@ -261,7 +261,8 @@
           </div>
 
           <div
-            class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col"
+            class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0"
+            data-taos-offset="400"
           >
             <div
               class="p-3 m-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg"
@@ -273,7 +274,7 @@
 
             <div class="flex-grow"></div>
 
-            <div class="pb-10 p-3">
+            <div class="pb-10 p-3 ">
               <h3 class="poppins-semibold text-lg mb-2">Convert</h3>
               <p class="poppins-regular text-gray-500">
                 By implementing data-driven techniques and continuous
@@ -666,6 +667,9 @@
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+
   <script src="./assets/scripts.js"></script>
 
   <script>
