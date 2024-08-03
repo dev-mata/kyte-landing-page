@@ -192,3 +192,25 @@ body {
 .scroll-to-top {
   display: none; /* Hidden by default */
 }
+
+.bg-custom {
+  background-image: url('./assets/images/servicedata-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* nav  */
+@media only screen and (min-width: 768px){
+  .parent:hover .child {
+      opacity:1;
+      height:auto;
+      overflow:none;
+      transform: translateY(0);
+  }
+  .child {
+      opacity:0;
+      height:0;
+      overflow:hidden;
+      transform: translateY(-10%);
+  }
+}

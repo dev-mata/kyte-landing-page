@@ -20,8 +20,25 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <script>document.documentElement.classList.add('js')</script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+
+
     <script>
       tailwind.config = {
+        plugins: [
+    require('taos/plugin')
+  ],
+  safelist: [
+    '!duration-[0ms]',
+    '!delay-[0ms]',
+    'html.js :where([class*="taos:"]:not(.taos-init))'
+  ],
+  content: {
+    relative: true,
+    transform: (content) => content.replace(/taos:/g, ''),
+    files: ['./src/*.{html,js}'],
+  },
         theme: {
           extend: {
             backgroundImage: {
@@ -54,51 +71,95 @@
       class="bg-cover bg-center min-h-screen"
       style="background-image: url('./assets/images/hero-bg.svg')"
     >
-      <header class="py-8 text-black">
-        <div
-          class="container mx-auto flex justify-between items-center px-4 md:mb-4 poppins-regular"
-        >
+      <header class="py-2 md:py-8 text-black">
+        <div class="container mx-auto hidden md:flex justify-between items-center px-4 md:mb-4 poppins-regular">
           <div class="flex items-center">
             <div><img src="./assets/images/kyte-logo.png" width="140px" /></div>
           </div>
           <nav class="hidden md:block">
             <ul class="flex space-x-4 justify-center">
               <li>
-                <a class="p-2 rounded-xl"> Home </a>
+                <a href="#home" class="p-2 rounded-xl cursor-pointer">Home</a>
               </li>
               <li>
-                <a class="p-2 rounded-xl"> About </a>
+                <a href="#about" class="p-2 rounded-xl">About</a>
               </li>
               <li>
-                <a class="p-2 rounded-xl"> Services </a>
+                <a href="#services" class="p-2 rounded-xl">Services</a>
               </li>
               <li>
-                <a class="p-2 rounded-xl"> Portfolio </a>
+                <a href="#portfolio" class="p-2 rounded-xl">Portfolio</a>
               </li>
               <li>
-                <a class="p-2 rounded-xl"> Contact </a>
+                <a href="#contact" class="p-2 rounded-xl">Contact</a>
               </li>
             </ul>
           </nav>
           <div class="flex items-center">
-            <button
-              class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white"
-            >
+            <button class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white">
               Connect with Us
             </button>
           </div>
         </div>
+
+        <!-- moibile nav -->
+        <nav class="fixed md:hidden top-0 left-0 right-0 flex px-4 border-b md:shadow-lg items-center bg-white z-50">
+          <div class="text-lg font-bold md:py-0 py-4">
+            <img src="./assets/images/kyte-logo.png" width="100px" />
+          </div>
+          <ul id="menu" class="px-6 py-10 md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0 bg-white bg-opacity-60 backdrop-blur-md hidden md:block">
+            <li>
+              <a href="#home" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+                <span>Portfolio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+          <div id="menu-icon" class="ml-auto text-gray-500 cursor-pointer md:hidden">
+            <!-- Hamburger Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" color="#000000" fill="none">
+              <path d="M7 5L17 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7 19L17 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </nav>
+        
+       <!-- moibile nav -->
+
+      
       </header>
 
       <!-- HERO -->
       <section
         class="flex items-center justify-center text-black poppins-regular h-screen"
+        id="home"
       >
         <div
-          class="text-center max-w-4xl bg-white bg-opacity-10 p-4 md:p-8 rounded -mt-[20rem]"
+          class="text-center max-w-4xl bg-white bg-opacity-10 p-4 md:p-8 rounded -mt-[20rem] delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0"
+          data-taos-offset="500"
         >
           <h1
-            class="text-4xl md:text-6xl mb-4 poppins-semibold text-center relative"
+            class="text-4xl md:text-6xl mb-4 poppins-semibold text-center relative "
           >
             We Transform Ideas <br />
             <span class="inline-flex items-center justify-center">
@@ -122,7 +183,7 @@
     </div>
 
     <!-- business growth -->
-    <section class="-mt-[20rem] mb-20 md:mb-[160px] p-4 md:p-0">
+    <section class="-mt-[20rem] mb-20 md:mb-[160px] p-4 md:p-0" id="about">
       <div class="text-black text-center">
         <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium  p-2">
           How our digital marketing services
@@ -134,7 +195,7 @@
 
       <div class="flex justify-center">
         <div class="grid grid-cols-12 gap-4 mt-12 w-full max-w-screen-xl">
-          <div class="flex col-span-12 md:col-span-6 bg-kt-gray rounded-xl">
+          <div class="flex col-span-12 md:col-span-6 bg-kt-gray rounded-xl delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="500">
             <div class="p-2 shrink-0 hidden md:block">
               <img
                 src="./assets/images/market-man.png"
@@ -142,7 +203,7 @@
               />
             </div>
 
-            <div class="flex ml-3 flex-col justify-between space-y-4 flex-grow">
+            <div class="flex ml-3 flex-col justify-between space-y-4 flex-grow  rounded-lg bg-custom">
               <div>
                 <img src="./assets/images/market-man-m.png" class="py-2 block md:hidden" />
                 <div
@@ -226,7 +287,7 @@
     <!-- business growth -->
 
     <!-- campaigns & projects -->
-    <section class="sec-campaign p-4 md:p-0 ">
+    <section class="sec-campaign p-4 md:p-0 " id="portfolio">
       <div class="flex justify-center">
         <div class="grid grid-col mt-12 w-full max-w-screen-xl">
           <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium">
@@ -279,7 +340,7 @@
     <!-- campaigns & projects -->
 
 
-    <section class="my-6 md:my-40"  style="background-image: url('./assets/images/hero-bg.svg')">
+    <section class="my-6 md:my-40"  style="background-image: url('./assets/images/hero-bg.svg')" id="services">
       
       <div class="relative flex justify-center">
         <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
@@ -306,8 +367,7 @@
           <div class="grid md:grid-cols-3 gap-4">
 
          
-
-            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+            <div class="rounded-xl border-2 p-4 border-black bg-kt-purple-100">
               <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
                 <img src="./assets/images/services/1.svg" />
               </div>
@@ -377,15 +437,48 @@
 
 
     <section class="-mt-10 ">
-      <div class=" flex justify-center">
+      <div class="relative flex justify-center">
         <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
-          <h1 class="text-3xl md:text-[40px] mb-4 poppins-semibold leading-relaxed">
-            Kyte Digital Marketing Agency is a team of experienced professionals based in Dubai. With years of industry expertise, we began our journey helping businesses of all sizes achieve online success.
-          
-          </h1>
-       
+        
+          <div class="grid md:grid-cols-2 gap-4">
+
+            <div class="relative rounded-[32px] bg-black inline-block">
+              <img src="./assets/images/story.png" alt="Story Image" />
+              <img src="./assets/images/play-video.svg" alt="Play Video" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" id="play-button" />
+            </div>
+              <!-- Modal for YouTube Video -->
+  <div id="video-modal" class="fixed inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center hidden z-50">
+    <div class="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full">
+      <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <div class="relative" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+        <iframe id="video-player" src="https://www.youtube.com/embed/QsY8fnvMn6c?si=DT1t8xUXBwcDx0sK"  class="absolute top-0 left-0 w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+            
+
+            <div class="rounded-xl bg-white p-4 ">
+              
+            
+              <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium mt-10">
+                What’s the story
+                <div class="mt-2 text-gray-400"><span>behind Kyte</span></div>
+              </h1>
+              <p class="mb-2 poppins-light text-[22px] mt-4 md:mt-12 leading-12">Kyte Digital Marketing Agency is a team of experienced professionals based in Dubai. With years of industry expertise, we began our journey helping businesses of all sizes achieve online success.</p>
+           
+              <button
+              class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white mt-16"
+            >
+              Let’s Build Now!
+            </button>
+
+            </div>
+
+          </div>
         </div>
-   
+      
       </div>
     </section>
 
@@ -436,7 +529,7 @@
 
     </section>
 
-    <section class="mt-40 mb-20 p-2 md:p-0">
+    <section class="mt-20 md:mt-40 mb-20 p-2 md:p-0">
       <div class="text-center">
         <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium px-2 md:px-10">
           We are helping to grow more revenue
@@ -476,7 +569,7 @@
      
     </section>
     <!-- class="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-50" -->
-    <footer class="py-6 dark:bg-kt-gray dark:text-gray-900 mt-10">
+    <footer class="py-6 dark:bg-kt-gray dark:text-gray-900 mt-10" id="contact">
       <div class="container px-6 mt-6 mx-auto space-y-6 divide-y dark:divide-gray-600 md:space-y-12 divide-opacity-50">
         <div class="grid grid-cols-12">
           <div class="pb-6 col-span-full md:pb-0 md:col-span-6">
@@ -573,45 +666,24 @@
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./assets/scripts.js"></script>
 
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesOffsetBefore: 5,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      freeMode: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        // when window width is <= 640px (mobile view)
-        640: {
-          slidesPerView: 1.2,
-        },
-        // you can add more breakpoints if needed
-      },
+    document.getElementById('play-button').addEventListener('click', function () {
+      var modal = document.getElementById('video-modal');
+      var videoPlayer = document.getElementById('video-player');
+      
+      videoPlayer.src = 'https://www.youtube.com/embed/VIDEO_ID?autoplay=1'; // Replace VIDEO_ID with your YouTube video ID
+      modal.classList.remove('hidden');
+    });
+
+    document.getElementById('close-modal').addEventListener('click', function () {
+      var modal = document.getElementById('video-modal');
+      var videoPlayer = document.getElementById('video-player');
+      
+      videoPlayer.src = ''; // Stop video playback
+      modal.classList.add('hidden');
     });
   </script>
 
-<script>
-  const scrollToTopButton = document.getElementById('scroll-to-top');
-
-  // Show button when user scrolls down
-  window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 100) {
-          scrollToTopButton.style.display = 'block';
-      } else {
-          scrollToTopButton.style.display = 'none';
-      }
-  });
-
-  // Smooth scroll to top
-  function scrollToTop() {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
-  }
-</script>
 </html>
