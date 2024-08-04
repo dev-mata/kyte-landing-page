@@ -19,7 +19,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
   // Swiper initialization
   var swiper = new Swiper(".mySwiper", {
     slidesOffsetBefore: 5,
-    slidesPerView: 1,
+    slidesPerView: 1.1,
     spaceBetween: 10,
     freeMode: true,
     pagination: {
