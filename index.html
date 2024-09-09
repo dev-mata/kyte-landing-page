@@ -51,6 +51,17 @@
     </script>
   </head>
   <body class="scroll-smooth">
+
+    <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center">
+      <!-- Anchor tag wrapping the image -->
+      <a href="https://www.example.com" target="_blank">
+          <img src="./assets/images/the-juans.jpg" alt="Popup Image" class="max-w-xs md:max-w-md lg:max-w-lg rounded-lg border-4 border-white">
+      </a>
+      <button class="close-btn absolute top-5 right-5 text-white text-3xl font-bold" onclick="closePopup()">X</button>
+  </div>
+   
+      <button class="close-btn" onclick="closePopup()">X</button>
+  </div>
     
     <!-- heading -->
     <!-- <div
@@ -172,6 +183,8 @@
     </button>
   </div>
 </section>
+
+
 
 
 
@@ -313,6 +326,7 @@
     </section>
     <!-- business growth -->
 
+    
     <!-- campaigns & projects -->
     <section class="sec-campaign p-4 md:p-0 " id="portfolio">
       <div class="flex justify-center">
@@ -715,5 +729,17 @@
       modal.classList.add('hidden');
     });
   </script>
+
+<script>
+  // Function to show popup when the page loads
+  window.onload = function() {
+      document.getElementById('popup').style.display = 'flex';
+  };
+
+  // Function to close popup when close button is clicked
+  function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+  }
+</script>
 
 </html>
