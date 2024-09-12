@@ -1,195 +1,194 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
+<html>
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- swiper CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- swiper CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            backgroundImage: {
-              "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-              "gradient-conic":
-                "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-            },
-            colors: {
-              "kt-purple": "#AA27F2",
-              "kt-purple-100": "#F4E5FD",
-              "kt-gray": "#F9F9F9",
-            },
-            keyframes: {
-              bounceIn: {
-                "0%, 20%, 40%, 60%, 80%, 100%": { transform: "translateY(0)" },
-                "50%": { transform: "translateY(-30px)" },
-              },
-            },
-            animation: {
-              "bounce-in": "bounceIn 1s ease-in-out",
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+            "gradient-conic":
+              "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          },
+          colors: {
+            "kt-purple": "#AA27F2",
+            "kt-purple-100": "#F4E5FD",
+            "kt-gray": "#F9F9F9",
+          },
+          keyframes: {
+            bounceIn: {
+              "0%, 20%, 40%, 60%, 80%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-30px)" },
             },
           },
+          animation: {
+            "bounce-in": "bounceIn 1s ease-in-out",
+          },
         },
-      };
-    </script>
-  </head>
-  <body class="scroll-smooth">
+      },
+    };
+  </script>
+</head>
 
-    <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center">
-      <!-- Anchor tag wrapping the image -->
-      <a href="https://dubai.platinumlist.net/event-tickets/93847/dxb-dreams-with-the-juans/casual-ticket-office?id_event_show=2398588" target="_blank" class="p-10">
-          <img src="./assets/images/the-juans.jpg" alt="Popup Image" class="max-w-xs md:max-w-md  rounded-lg border-4 border-white">
-      </a> 
-      <button class="close-btn absolute top-5 right-5 text-white text-3xl font-bold" onclick="closePopup()">X</button>
+<body class="scroll-smooth">
+
+  <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center">
+    <!-- Anchor tag wrapping the image -->
+    <a href="https://dubai.platinumlist.net/event-tickets/93847/dxb-dreams-with-the-juans/casual-ticket-office?id_event_show=2398588"
+      target="_blank" class="p-10">
+      <img src="./assets/images/the-juans.jpg" alt="Popup Image"
+        class="max-w-xs md:max-w-md  rounded-lg border-4 border-white">
+    </a>
+    <button class="close-btn absolute top-5 right-5 text-white text-3xl font-bold" onclick="closePopup()">X</button>
   </div>
 
-   
-    
+
+
   </div>
-    
-    <!-- heading -->
-    <!-- <div
+
+  <!-- heading -->
+  <!-- <div
       class="bg-cover bg-center min-h-screen z-50"
       style="background-image: url('./assets/images/hero-bg.svg')"
     > -->
-      <header class="py-2 md:py-2 text-white z-50">
-        <div class="container mx-auto hidden md:flex justify-between items-center px-4 md:mb-4 poppins-regular backdrop-blur-lg">
-          <div class="flex items-center">
-            <div><img src="./assets/images/kyte-logo-white.png" width="140px" /></div>
-          </div>
-          <nav class="hidden md:block">
-            <ul class="flex space-x-4 justify-center">
-              <li>
-                <a href="#home" class="p-2 rounded-xl cursor-pointer">Home</a>
-              </li>
-              <li>
-                <a href="#about" class="p-2 rounded-xl">About</a>
-              </li>
-              <li>
-                <a href="#services" class="p-2 rounded-xl">Services</a>
-              </li>
-              <li>
-                <a href="#portfolio" class="p-2 rounded-xl">Portfolio</a>
-              </li>
-              <li>
-                <a href="#contact" class="p-2 rounded-xl">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="flex items-center">
-            <button class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white">
-              Connect with Us
-            </button>
-          </div>
-        </div>
+  <header class="py-2 md:py-2 text-white z-50">
+    <div
+      class="container mx-auto hidden md:flex justify-between items-center px-4 md:mb-4 poppins-regular backdrop-blur-lg">
+      <div class="flex items-center">
+        <div><img src="./assets/images/kyte-logo-white.png" width="140px" /></div>
+      </div>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-4 justify-center">
+          <li>
+            <a href="#home" class="p-2 rounded-xl cursor-pointer">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="p-2 rounded-xl">About</a>
+          </li>
+          <li>
+            <a href="#services" class="p-2 rounded-xl">Services</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="p-2 rounded-xl">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact" class="p-2 rounded-xl">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex items-center">
+        <button class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white">
+          Connect with Us
+        </button>
+      </div>
+    </div>
 
-        <!-- moibile nav -->
-        <nav class="fixed md:hidden top-0 left-0 right-0 flex px-4 border-b md:shadow-lg items-center backdrop-blur-xl z-50">
-          <div class="text-lg font-bold md:py-0 py-4">
-            <img src="./assets/images/kyte-logo-white.png" width="100px" />
-          </div>
-          <ul id="menu" class="px-6 py-10 md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0 bg-white text-black backdrop-blur-md hidden md:block">
-            <li>
-              <a href="#home" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="#about" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
-                <span>About</span>
-              </a>
-            </li>
-            <li>
-              <a href="#services" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
-                <span>Services</span>
-              </a>
-            </li>
-            <li>
-              <a href="#portfolio" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
-                <span>Portfolio</span>
-              </a>
-            </li>
-            <li>
-              <a href="#contact" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
-          <div id="menu-icon" class="ml-auto text-gray-500 cursor-pointer md:hidden">
-            <!-- Hamburger Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" color="#000000" fill="none">
-              <path d="M7 5L17 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M7 19L17 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-        </nav>
-        
-       <!-- moibile nav -->
+    <!-- moibile nav -->
+    <nav
+      class="fixed md:hidden top-0 left-0 right-0 flex px-4 border-b md:shadow-lg items-center backdrop-blur-xl z-50">
+      <div class="text-lg font-bold md:py-0 py-4">
+        <img src="./assets/images/kyte-logo-white.png" width="100px" />
+      </div>
+      <ul id="menu"
+        class="px-6 py-10 md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0 bg-white text-black backdrop-blur-md hidden md:block">
+        <li>
+          <a href="#home" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+            <span>About</span>
+          </a>
+        </li>
+        <li>
+          <a href="#services" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+            <span>Services</span>
+          </a>
+        </li>
+        <li>
+          <a href="#portfolio" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+            <span>Portfolio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="flex md:inline-flex p-2 items-center hover:bg-gray-50">
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+      <div id="menu-icon" class="ml-auto text-gray-500 cursor-pointer md:hidden">
+        <!-- Hamburger Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" color="#000000" fill="none">
+          <path d="M7 5L17 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M7 19L17 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+    </nav>
 
-      
-      </header>
+    <!-- moibile nav -->
 
-      <!-- HERO -->
 
-      <section
-  class="relative -mt-[120px] flex items-center justify-center text-white poppins-regular h-screen overflow-hidden -z-50"
-  id="home"
->
-  <!-- Video Background -->
-  <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-    <source src="./assets/images/videos/kyte-vid.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  </header>
 
-  <!-- Content -->
-  <div
-    class="relative z-10 text-center max-w-4xl bg-white  bg-opacity-20 p-4 md:p-8 rounded-xl mt-0  duration-[1000ms] taos:opacity-0"
-  >
-    <h1
-      class="text-4xl md:text-6xl mb-4 poppins-semibold text-center relative"
-    >
-      We Transform Ideas <br />
-      <span class="inline-flex items-center justify-center">
-        Into Conversions
-      </span>
-    </h1>
+  <!-- HERO -->
 
-    <p class="mb-6 md:px-4 sm:px-10 md:px-20 mt-8 leading-6">
-      Welcome to Kyte Digital Marketing Agency, where we combine our
-      expertise in social media marketing, SEO, and paid ads to help
-      businesses achieve tangible results. Fly high with Kyte!
-    </p>
-    <button
-      class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white"
-    >
-      Let’s Build Now!
-    </button>
-  </div>
-</section>
+  <section
+    class="relative -mt-[120px] flex items-center justify-center text-white poppins-regular h-screen overflow-hidden -z-50"
+    id="home">
+    <!-- Video Background -->
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+      <source src="./assets/images/videos/kyte-vid.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
+    <!-- Content -->
+    <div
+      class="relative z-10 text-center max-w-4xl bg-white  bg-opacity-20 p-4 md:p-8 rounded-xl mt-0  duration-[1000ms] taos:opacity-0">
+      <h1 class="text-4xl md:text-6xl mb-4 poppins-semibold text-center relative">
+        We Transform Ideas <br />
+        <span class="inline-flex items-center justify-center">
+          Into Conversions
+        </span>
+      </h1>
+
+      <p class="mb-6 md:px-4 sm:px-10 md:px-20 mt-8 leading-6">
+        Welcome to Kyte Digital Marketing Agency, where we combine our
+        expertise in social media marketing, SEO, and paid ads to help
+        businesses achieve tangible results. Fly high with Kyte!
+      </p>
+      <button class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white">
+        Let’s Build Now!
+      </button>
+    </div>
+  </section>
 
 
 
 
-      <!-- <section
+
+  <!-- <section
         class="flex items-center justify-center text-black poppins-regular h-screen"
         id="home"
       >
@@ -219,527 +218,570 @@
           </button>
         </div>
       </section> -->
+  </div>
+
+  <!-- business growth -->
+  <section class="mt-0 md:mt-[5rem] mb-20 md:mb-[160px] p-4 md:p-0" id="about">
+    <div class="text-black text-center ">
+      <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium  p-2 delay-[500ms] duration-[1000ms]">
+        How our digital marketing services
+        <div class="mt-2 text-gray-400">
+          <span>drive business growth</span>
+        </div>
+      </h1>
     </div>
 
-    <!-- business growth -->
-    <section class="mt-0 md:mt-[5rem] mb-20 md:mb-[160px] p-4 md:p-0" id="about">
-      <div class="text-black text-center ">
-        <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium  p-2 delay-[500ms] duration-[1000ms]">
-          How our digital marketing services
-          <div class="mt-2 text-gray-400">
-            <span>drive business growth</span>
+    <div class="flex justify-center">
+      <div class="grid grid-cols-12 gap-4 mt-12 w-full max-w-screen-xl">
+        <div class="flex col-span-12 md:col-span-6 bg-kt-gray rounded-xl ">
+          <div class="p-2 shrink-0 hidden md:block">
+            <img src="./assets/images/market-man.png" style="height: 400px; width: 230px" />
           </div>
+
+          <div class="flex ml-3 flex-col justify-between space-y-4 flex-grow  rounded-lg bg-custom">
+            <div>
+              <img src="./assets/images/market-man-m.png" class="py-2 block md:hidden" />
+              <div
+                class="p-3 mt-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg hidden md:block">
+                <div class="">
+                  <img src="./assets/images/m3.svg" />
+                </div>
+              </div>
+
+              <div class="flex mt-6 md:mt-20 space-x-8">
+                <div>
+                  <h2 class="text-3xl poppins-semibold">+199 %</h2>
+                  <p class="text-sm text-gray-400">
+                    Top 5 Keywords<br />Rankings
+                  </p>
+                </div>
+                <div>
+                  <h2 class="text-3xl poppins-semibold">+268 %</h2>
+                  <p class="text-sm text-gray-400">Monthly Leads</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pb-10">
+              <h3 class="poppins-semibold text-lg mb-2">Discover</h3>
+              <p class="poppins-regular text-gray-500">
+                We dive deep into your business goals, audience, and industry
+                to lay a solid foundation for success.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col">
+          <div class="p-3 m-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg">
+            <div>
+              <img src="./assets/images/m1.svg" />
+            </div>
+          </div>
+
+          <div class="flex-grow"></div>
+
+          <div class="pb-10 p-3">
+            <h3 class="poppins-semibold text-lg mb-2">Create</h3>
+            <p class="poppins-regular text-gray-500">
+              Our team of experts crafts compelling content, captivating
+              designs, and effective strategies to boost your brand.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col ">
+          <div class="p-3 m-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg">
+            <div>
+              <img src="./assets/images/m2.svg" />
+            </div>
+          </div>
+
+          <div class="flex-grow"></div>
+
+          <div class="pb-10 p-3 ">
+            <h3 class="poppins-semibold text-lg mb-2">Convert</h3>
+            <p class="poppins-regular text-gray-500">
+              By implementing data-driven techniques and continuous
+              optimization, we maximize conversions and drive growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- business growth -->
+
+
+  <!-- campaigns & projects -->
+  <section class="sec-campaign p-4 md:p-0 " id="portfolio">
+    <div class="flex justify-center">
+      <div class="grid grid-col mt-12 w-full max-w-screen-xl">
+        <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium delay-[500ms] duration-[1000ms]">
+          When people
+          <div class="mt-2 text-gray-400"><span>do work with us</span></div>
         </h1>
+        <p>
+          Check out some of our most recent successful campaigns and projects.
+        </p>
       </div>
+    </div>
 
-      <div class="flex justify-center">
-        <div class="grid grid-cols-12 gap-4 mt-12 w-full max-w-screen-xl">
-          <div class="flex col-span-12 md:col-span-6 bg-kt-gray rounded-xl ">
-            <div class="p-2 shrink-0 hidden md:block">
-              <img
-                src="./assets/images/market-man.png"
-                style="height: 400px; width: 230px"
-              />
-            </div>
 
-            <div class="flex ml-3 flex-col justify-between space-y-4 flex-grow  rounded-lg bg-custom">
-              <div>
-                <img src="./assets/images/market-man-m.png" class="py-2 block md:hidden" />
+
+
+    <div class="flex justify-center">
+      <div class="swiper mySwiper w-full max-w-screen-xl">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="flex justify-center delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible">
+              <div class="relative mt-12 w-full max-w-screen-xl rounded-[10px] md:rounded-[40px]">
+                <img src="./assets/images/work/ghurair.jpg" class="w-full h-auto rounded-[10px] md:rounded-[40px]" />
                 <div
-                  class="p-3 mt-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg hidden md:block"
-                >
-                  <div class="">
-                    <img src="./assets/images/m3.svg" />
-                  </div>
+                  class="absolute inset-0 flex flex-col items-center justify-center text-left md:text-center text-white p-4">
+                  <h1 class="text-4xl poppins-semibold mb-4 mt-2 md:mt-60">AL GHURAIR</h1>
+                  <p class="mb-4 px-2 md:px-[100px]">At Kyte Marketing, copywriting is our heart and soul. Ideas are born from the words we write. It is with great honor that we were tasked to undertake a comprehensive copywriting project for one of Dubai's a multi-conglomerate entity with interests spanning real estate and automotive sectors. Our task involved crafting engaging and precise company profiles that captured the essence of their diverse operations, while also developing clear and effective human resource policies. With our credible team of copywriters, we had successfully blended industry expertise with strategic messaging, ensuring that each document not only conveyed the group's expansive reach and values, but also supported internal consistency and regulatory compliance.</p>
                 </div>
-               
-                <div class="flex mt-6 md:mt-20 space-x-8">
-                  <div>
-                    <h2 class="text-3xl poppins-semibold">+199 %</h2>
-                    <p class="text-sm text-gray-400">
-                      Top 5 Keywords<br />Rankings
-                    </p>
-                  </div>
-                  <div>
-                    <h2 class="text-3xl poppins-semibold">+268 %</h2>
-                    <p class="text-sm text-gray-400">Monthly Leads</p>
-                  </div>
+                
+                <a href="https://al-ghurair.com/en" target="_blank" class="absolute justify-center text-center top-4 left-4 bg-black text-white py-1 md:py-3 px-2 md:px-6 rounded-xl md:rounded-full h-10 md:h-[48px] hover:bg-gray-700 hover:text-white text-xs md:text-sm hidden md:block">Visit Site</a>
+             
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="flex justify-center">
+              <div class="relative mt-12 w-full max-w-screen-xl rounded-[10px] md:rounded-[40px]">
+                <img src="./assets/images/work/aboitizland.jpg" class="w-full h-auto rounded-[10px] md:rounded-[40px]" />
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center text-left md:text-center text-white p-4">
+                  <h1 class="text-4xl poppins-semibold mb-4 mt-2 md:mt-60">ABOITIZLAND</h1>
+                  <p class="mb-4 px-2 md:px-[100px]">When it comes to business and sales-focused campaigns, Kyte is your go-to partner. We are proud to have spearheaded event activation management and content ideation for one of the leading real estate companies in the Philippines. Across London, Dubai, and Qatar, we have conceptualized and implemented engaging strategies that captivate target audiences and elevate brand presence. Through compelling content and visuals along with the right photography and videography, we were engaged in showcasing the client's messaging effectively. We had designed and set up innovative booths that enhance the overall event experience and maximize brand impact.</p>
                 </div>
-              </div>
-
-              <div class="pb-10">
-                <h3 class="poppins-semibold text-lg mb-2">Discover</h3>
-                <p class="poppins-regular text-gray-500">
-                  We dive deep into your business goals, audience, and industry
-                  to lay a solid foundation for success.
-                </p>
+                <a href="https://aboitizland.com/" target="_blank" class="absolute justify-center text-center top-4 left-4 bg-black text-white py-1 md:py-3 px-2 md:px-6 rounded-xl md:rounded-full h-10 md:h-[48px] hover:bg-gray-700 hover:text-white text-xs md:text-sm hidden md:block">Visit Site</a>
               </div>
             </div>
           </div>
 
-          <div
-            class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col"
-           
-          >
-            <div
-              class="p-3 m-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg"
-            >
-              <div>
-                <img src="./assets/images/m1.svg" />
+          <div class="swiper-slide">
+            <div class="flex justify-center">
+              <div class="relative mt-12 w-full max-w-screen-xl rounded-[10px] md:rounded-[40px]">
+                <img src="./assets/images/work/albustan.jpg" class="w-full h-auto rounded-[10px] md:rounded-[40px]" />
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center text-left md:text-center text-white p-4">
+                  <h1 class="text-4xl poppins-semibold mb-4 mt-2 md:mt-60">AL BUSTAN PLUS  </h1>
+                  <p class="mb-4 px-2 md:px-[100px]">For its social media launch, Kyte was assigned to lead the launch optimization of Abu Dhabi's most trusted dental group through its social media channels and website, leveraging SEO strategies to enhance brand visibility across platforms. With our expertise in both English and Arabic content, all the imageries, videos, and creative copy have been crucial in creating engaging, culturally relevant theme that resonates with diverse audiences. Our team had crafted and implemented a cohesive digital strategy that contributed to its online engagement, improved search rankings, and solidified the business' online presence, ensuring a strong and impactful launch across all digital touchpoints.</p>
+                </div>
+                <a href="https://www.albustanmc.com/" target="_blank" class="absolute justify-center text-center top-4 left-4 bg-black text-white py-1 md:py-3 px-2 md:px-6 rounded-xl md:rounded-full h-10 md:h-[48px] hover:bg-gray-700 hover:text-white text-xs md:text-sm hidden md:block">Visit Site</a>
               </div>
-            </div>
-
-            <div class="flex-grow"></div>
-
-            <div class="pb-10 p-3">
-              <h3 class="poppins-semibold text-lg mb-2">Create</h3>
-              <p class="poppins-regular text-gray-500">
-                Our team of experts crafts compelling content, captivating
-                designs, and effective strategies to boost your brand.
-              </p>
             </div>
           </div>
 
-          <div
-            class="col-span-12 md:col-span-3 bg-white border-2 rounded-xl flex flex-col "
-           
-          >
-            <div
-              class="p-3 m-2 bg-white border-2 h-[64px] w-[64px] flex justify-center items-center rounded-lg"
-            >
-              <div>
-                <img src="./assets/images/m2.svg" />
-              </div>
-            </div>
-
-            <div class="flex-grow"></div> 
-
-            <div class="pb-10 p-3 ">
-              <h3 class="poppins-semibold text-lg mb-2">Convert</h3>
-              <p class="poppins-regular text-gray-500">
-                By implementing data-driven techniques and continuous
-                optimization, we maximize conversions and drive growth.
-              </p>
-            </div>
-          </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
-    </section>
-    <!-- business growth -->
+    </div>
 
-    
-    <!-- campaigns & projects -->
-    <section class="sec-campaign p-4 md:p-0 " id="portfolio">
-      <div class="flex justify-center">
-        <div class="grid grid-col mt-12 w-full max-w-screen-xl">
-          <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium delay-[500ms] duration-[1000ms]">
-            When people
-            <div class="mt-2 text-gray-400"><span>do work with us</span></div>
-          </h1>
-          <p>
-            Check out some of our most recent successful campaigns and projects.
-          </p>
-        </div>
+  </section>
+  <!-- campaigns & projects -->
+
+
+
+
+
+  <section class="my-6 md:my-40" style="background-image: url('./assets/images/hero-bg.svg')" id="services">
+
+    <div class="relative flex justify-center">
+      <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
+        <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium">
+          Our services to result
+          <div class="mt-2 text-gray-400"><span>driven marketing agency</span></div>
+        </h1>
+        <p>
+          We offer comprehensive digital marketing solutions that deliver measurable results.
+        </p>
       </div>
 
- 
-
-      
-      <div class="flex justify-center">
-        <div class="swiper mySwiper w-full max-w-screen-xl">
-          <div class="swiper-wrapper">
-       
-            <div class="swiper-slide">
-              <div class="flex justify-center delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible">
-                <div class="relative mt-12 w-full max-w-screen-xl rounded-[10px] md:rounded-[40px]">
-                  <img src="./assets/images/camp-1.png" class="w-full h-auto rounded-[10px] md:rounded-[40px]" />
-                  <div class="absolute inset-0 flex flex-col items-center justify-center text-left md:text-center text-white p-4">
-                    <h1 class="text-4xl poppins-semibold mb-4 mt-2 md:mt-60">JETOUR LLC</h1>
-                    <p class="mb-4 px-2 md:px-[250px]">Cosmedent Clinic is committed to providing patients with comprehensive, quality and compassionate dental care treatment.</p>
-                  </div>
-                  <button class="absolute top-4 left-4 bg-black text-white py-1 md:py-2 px-2 md:px-6 rounded-xl md:rounded-full h-10 md:h-[48px] hover:bg-gray-700 hover:text-white text-xs md:text-sm hidden md:block">Visit Site</button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="flex justify-center">
-                <div class="relative mt-12 w-full max-w-screen-xl rounded-[10px] md:rounded-[40px]">
-                  <img src="./assets/images/camp-1.png" class="w-full h-auto rounded-[10px] md:rounded-[40px]" />
-                  <div class="absolute inset-0 flex flex-col items-center justify-center text-left md:text-center text-white p-4">
-                    <h1 class="text-4xl poppins-semibold mb-4 mt-2 md:mt-60">JETOUR LLC</h1>
-                    <p class="mb-4 px-2 md:px-[250px]">Cosmedent Clinic is committed to providing patients with comprehensive, quality and compassionate dental care treatment.</p>
-                  </div>
-                  <button class="absolute top-4 left-4 bg-black text-white py-1 md:py-2 px-2 md:px-6 rounded-xl md:rounded-full h-10 md:h-[48px] hover:bg-gray-700 hover:text-white text-xs md:text-sm hidden md:block">Visit Site</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-      
-    </section>
-    <!-- campaigns & projects -->
-
-
-    <section class="my-6 md:my-40"  style="background-image: url('./assets/images/hero-bg.svg')" id="services">
-      
-      <div class="relative flex justify-center">
-        <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
-          <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium">
-            Our services to result 
-            <div class="mt-2 text-gray-400"><span>driven marketing agency</span></div>
-          </h1>
-          <p>
-            We offer comprehensive digital marketing solutions that deliver measurable results.
-          </p>
-        </div>
-      
-        <!-- <button
+      <!-- <button
           class="md:absolute bottom-0 right-48 mb-4 mr-4 bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white"
         >
           Let’s Build Now!
         </button> -->
-      </div>
+    </div>
 
 
-      <div class="relative flex justify-center">
-        <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
-        
-          <div class="grid md:grid-cols-3 gap-4 delay-[500ms] duration-[1000ms] taos:opacity-0">
+    <div class="relative flex justify-center">
+      <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
 
-         
-            <div class="rounded-xl border-2 p-4 border-black bg-kt-purple-100 ">
-              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
-                <img src="./assets/images/services/1.svg" />
-              </div>
-            
-              <h3 class="poppins-semibold text-lg mt-14 mb-4">Social Media Marketing</h3>
-              <p class="mb-2">Engage and connect with your target audience through strategic social media marketing campaigns.</p>
+        <div class="grid md:grid-cols-3 gap-4 delay-[500ms] duration-[1000ms] taos:opacity-0">
+
+
+          <div class="rounded-xl border-2 p-4 border-black bg-kt-purple-100 ">
+            <div
+              class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+              <img src="./assets/images/services/1.svg" />
             </div>
 
-            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
-              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
-                <img src="./assets/images/services/2.svg" />
-              </div>
-            
-              <h3 class="poppins-semibold text-lg mt-14 mb-4">Search Engine Optimization</h3>
-              <p class="mb-2">Improve your website’s visibility and organic search rankings to drive more traffic and leads.</p>
-            </div>
-
-            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
-              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
-                <img src="./assets/images/services/3.svg" />
-              </div>
-            
-              <h3 class="poppins-semibold text-lg mt-14 mb-4">Paid Ads (PPC) Management</h3>
-              <p class="mb-2">Maximize your ROI through our data-driven PPC campaigns on various platforms.</p>
-            </div>
-
-            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
-              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
-                <img src="./assets/images/services/4.svg" />
-              </div>
-            
-              <h3 class="poppins-semibold text-lg mt-14 mb-4">Content Creation</h3>
-              <p class="mb-2">Create compelling and engaging content to attract and retain your target audience.</p>
-            </div>
-
-            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
-              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
-                <img src="./assets/images/services/5.svg" />
-              </div>
-            
-              <h3 class="poppins-semibold text-lg mt-14 mb-4">Website Design & Development</h3>
-              <p class="mb-2">Craft a visually appealing and user-friendly website that reflects your brand and drives conversions.</p>
-            </div>
-
-            <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
-              <div class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
-                <img src="./assets/images/services/6.svg" />
-              </div>
-            
-              <h3 class="poppins-semibold text-lg mt-14 mb-4">Email Marketing</h3>
-              <p class="mb-2">Leverage the power of email marketing to nurture leads and drive repeat business.</p>
-            </div>
-      
-            
-          
-        
+            <h3 class="poppins-semibold text-lg mt-14 mb-4">Social Media Marketing</h3>
+            <p class="mb-2">Engage and connect with your target audience through strategic social media marketing
+              campaigns.</p>
           </div>
 
-        </div>
-      
-      
-      </div>
-   
-    </section>
-
-
-
-
-    <section class="-mt-10 ">
-      <div class="relative flex justify-center">
-        <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
-        
-          <div class="grid md:grid-cols-2 gap-4">
-
-            <div class="relative rounded-[32px] bg-black inline-block">
-              <img src="./assets/images/story.png" alt="Story Image" />
-              <img src="./assets/images/play-video.svg" alt="Play Video" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" id="play-button" />
+          <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+            <div
+              class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+              <img src="./assets/images/services/2.svg" />
             </div>
-              <!-- Modal for YouTube Video -->
-  <div id="video-modal" class="fixed inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center hidden z-50">
-    <div class="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full">
-      <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-      </button>
-      <div class="relative" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
-        <iframe id="video-player" src="https://www.youtube.com/embed/QsY8fnvMn6c?si=DT1t8xUXBwcDx0sK"  class="absolute top-0 left-0 w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-            
 
-            <div class="rounded-xl bg-white p-4 ">
-              
-            
-              <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium mt-10">
-                What’s the story
-                <div class="mt-2 text-gray-400"><span>behind Kyte</span></div>
-              </h1>
-              <p class="mb-2 poppins-light text-[22px] mt-4 md:mt-12 leading-12">Kyte Digital Marketing Agency is a team of experienced professionals based in Dubai. With years of industry expertise, we began our journey helping businesses of all sizes achieve online success.</p>
-           
-              <button
-              class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white mt-16"
-            >
+            <h3 class="poppins-semibold text-lg mt-14 mb-4">Search Engine Optimization</h3>
+            <p class="mb-2">Improve your website’s visibility and organic search rankings to drive more traffic and
+              leads.</p>
+          </div>
+
+          <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+            <div
+              class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+              <img src="./assets/images/services/3.svg" />
+            </div>
+
+            <h3 class="poppins-semibold text-lg mt-14 mb-4">Paid Ads (PPC) Management</h3>
+            <p class="mb-2">Maximize your ROI through our data-driven PPC campaigns on various platforms.</p>
+          </div>
+
+          <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+            <div
+              class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+              <img src="./assets/images/services/4.svg" />
+            </div>
+
+            <h3 class="poppins-semibold text-lg mt-14 mb-4">Content Creation</h3>
+            <p class="mb-2">Create compelling and engaging content to attract and retain your target audience.</p>
+          </div>
+
+          <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+            <div
+              class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+              <img src="./assets/images/services/5.svg" />
+            </div>
+
+            <h3 class="poppins-semibold text-lg mt-14 mb-4">Website Design & Development</h3>
+            <p class="mb-2">Craft a visually appealing and user-friendly website that reflects your brand and drives
+              conversions.</p>
+          </div>
+
+          <div class="rounded-xl bg-white border-2 border-gray-200 p-4 hover:border-black hover:bg-kt-purple-100">
+            <div
+              class="flex bg-white h-[64px] w-[64px] items-center justify-center rounded-lg border-2 border-gray-200 hover:border-black  ">
+              <img src="./assets/images/services/6.svg" />
+            </div>
+
+            <h3 class="poppins-semibold text-lg mt-14 mb-4">Email Marketing</h3>
+            <p class="mb-2">Leverage the power of email marketing to nurture leads and drive repeat business.</p>
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+  <section class="-mt-10 ">
+    <div class="relative flex justify-center">
+      <div class="grid grid-col mt-12 w-full max-w-screen-xl px-4">
+
+        <div class="grid md:grid-cols-2 gap-4">
+
+          <div class="relative rounded-[32px] bg-black inline-block">
+            <img src="./assets/images/story.png" alt="Story Image" />
+            <!-- <img src="./assets/images/play-video.svg" alt="Play Video"
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+              id="play-button" /> -->
+          </div>
+          <!-- Modal for YouTube Video -->
+          <div id="video-modal"
+            class="fixed inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center hidden z-50">
+            <div class="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full">
+              <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+              <div class="relative" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                <iframe id="video-player" src="https://www.youtube.com/embed/QsY8fnvMn6c?si=DT1t8xUXBwcDx0sK"
+                  class="absolute top-0 left-0 w-full h-full" src="" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="rounded-xl bg-white p-4 ">
+
+
+            <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium mt-10">
+              What’s the story
+              <div class="mt-2 text-gray-400"><span>behind Kyte</span></div>
+            </h1>
+            <p class="mb-2 poppins-light text-[22px] mt-4 md:mt-12 leading-12">Kyte Digital Marketing Agency is a team
+              of experienced professionals based in Dubai. With years of industry expertise, we began our journey
+              helping businesses of all sizes achieve online success.</p>
+
+            <button
+              class="bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white mt-16">
               Let’s Build Now!
             </button>
 
-            </div>
-
           </div>
-        </div>
-      
-      </div>
-    </section>
 
-    <section class="my-10 p-2 md:-p-0">
-      <div class="flex justify-center">
-        <div class="grid grid-col mt-12 w-full max-w-screen-xl bg-gray-100 rounded-xl delay-[500ms] duration-[1000ms] taos:opacity-0">
-          <div class="md:flex">
-            <div class="bg-white m-2 p-10 rounded-lg">
-              <img src="./assets/images/services/partners/emaar.png" height="18px" width="84px" class="mt-10" />
-              <p class="poppins-regular-italic text-lg mt-10">"“We  went from 120 to 500 major clients in just 3 months.
-                Thanks for the great management of Kyte Digital.”</p>
-
-                <p class="poppins-bold mt-14">Amit Jain</p>
-                <p class="mb-10">CEO of EMAAR Properties</p>
-            </div>
-
-            <div class="m-2 items-center md:items-left justify-center mobile-center">
-              <h3 class="poppins-semibold text-3xl mt-10">Where we <br> are now.</h3>
-            
-              <div class="flex mt-10">
-                <p class="text-sm">Reviews 255,000 <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="10" height="10" color="#00B67A" fill="#00B67A" class="inline-flex">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                </svg></span> Excellent</p>
-              </div>
-            
-              <img src="./assets/images/trustpilot.png" height="110px" width="226px" />
-              <p class="text-xs poppins-medium p-1 rounded-lg bg-[#D4EFE6] mt-1 px-2 inline-block">VERIFIED COMPANY</p>
-              <br>
-              <button class="mt-10 mb-4 mr-4 bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white">
-                GET STARTED
-              </button>
-            </div>
-
-          </div>
-         
         </div>
       </div>
 
-      <div class=" flex justify-center">
-        <div class="grid grid-col mt-2 w-full max-w-screen-xl px-4">
-          <p>
-            Trusted by MENA’s Top Companies          
-          </p>
+    </div>
+  </section>
+
+  <section class="my-10 p-2 md:-p-0">
+    <div class="flex justify-center">
+      <div
+        class="grid grid-col mt-12 w-full max-w-screen-xl bg-gray-100 rounded-xl delay-[500ms] duration-[1000ms] taos:opacity-0">
+        <div class="md:flex">
+          <div class="bg-white m-2 p-10 rounded-lg">
+            <img src="./assets/images/services/partners/emaar.png" height="18px" width="84px" class="mt-10" />
+            <p class="poppins-regular-italic text-lg mt-10">"“We went from 120 to 500 major clients in just 3 months.
+              Thanks for the great management of Kyte Digital.”</p>
+
+            <p class="poppins-bold mt-14">Amit Jain</p>
+            <p class="mb-10">CEO of EMAAR Properties</p>
+          </div>
+
+          <div class="m-2 items-center md:items-left justify-center mobile-center">
+            <h3 class="poppins-semibold text-3xl mt-10">Where we <br> are now.</h3>
+
+            <div class="flex mt-10">
+              <p class="text-sm">Reviews 255,000 <span class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" width="10" height="10" color="#00B67A" fill="#00B67A" class="inline-flex">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                  </svg></span> Excellent</p>
+            </div>
+
+            <img src="./assets/images/trustpilot.png" height="110px" width="226px" />
+            <p class="text-xs poppins-medium p-1 rounded-lg bg-[#D4EFE6] mt-1 px-2 inline-block">VERIFIED COMPANY</p>
+            <br>
+            <button
+              class="mt-10 mb-4 mr-4 bg-black text-white py-2 px-6 rounded-full h-[48px] hover:bg-gray-700 hover:text-white">
+              GET STARTED
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class=" flex justify-center">
+      <div class="grid grid-col mt-2 w-full max-w-screen-xl px-4">
+        <p>
+          Trusted by MENA’s Top Companies
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="mt-20 md:mt-40 mb-20 p-2 md:p-0"></section>
+    <div class="text-center">
+      <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium px-2 md:px-10">
+        We are helping to grow more revenue
+        <div class="mt-2 text-gray-400">
+          <span>for all those partners</span>
+        </div>
+      </h1>
+      <p>We offer comprehensive digital marketing solutions that deliver measurable results.</p>
+
+      <div class="md:inline-flex sm:grid sm:grid-cols-2 items-center justify-center mt-10">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-4 items-center justify-center">
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/partners/aboitiz.png" class="w-auto h-[30px] mx-6" />
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/partners/alBustan.png" class="w-auto h-[85px] mx-6" />
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/partners/albustanPlus.png" class="w-auto h-[58px] mx-6" />
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/partners/chiro.png" class="w-auto h-[85px] mx-6" />
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/partners/ghurair.png" class="w-auto h-[85px] mx-6" />
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/partners/aboitiz.png" class="w-auto h-[30px] mx-6" />
+          </div>
        
         </div>
-   
       </div>
+    </div>
 
-    </section>
 
-    <section class="mt-20 md:mt-40 mb-20 p-2 md:p-0">
-      <div class="text-center">
-        <h1 class="text-4xl md:text-[40px] mb-4 poppins-medium px-2 md:px-10">
-          We are helping to grow more revenue
-          <div class="mt-2 text-gray-400">
-            <span>for all those partners</span>
-          </div>
-        </h1>
-        <p>We offer comprehensive digital marketing solutions that deliver measurable results.</p>
-   
-        <div class="md:inline-flex sm:grid sm:grid-cols-2 items-center justify-center mt-10">
-          <div class="grid grid-cols-2 md:grid-cols-6 gap-4 items-center justify-center">
-            <div class="flex items-center justify-center">
-              <img src="./assets/images/services/partners/image 10.png" class="w-auto h-[75px] mx-6" />
+  </section>
+
+
+  <!-- class="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-50" -->
+  <footer class="py-6 dark:bg-kt-gray dark:text-gray-900 mt-10" id="contact">
+    <div class="container px-6 mt-6 mx-auto space-y-6 divide-y dark:divide-gray-600 md:space-y-12 divide-opacity-50">
+      <div class="grid grid-cols-12">
+        <div class="pb-6 col-span-full md:pb-0 md:col-span-6">
+          <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 md:justify-start">
+            <div class="flex">
+              <img src="./assets/images/kyte-dark.png" width="140px" />
             </div>
-            <div class="flex items-center justify-center">
-              <img src="./assets/images/services/partners/image 5.png" class="w-auto h-[24px] mx-6" />
-            </div>
-            <div class="flex items-center justify-center">
-              <img src="./assets/images/services/partners/image 6.png" class="w-auto h-[58px] mx-6" />
-            </div>
-            <div class="flex items-center justify-center">
-              <img src="./assets/images/services/partners/image 7.png" class="w-auto h-[52px] mx-6" />
-            </div>
-            <div class="flex items-center justify-center">
-              <img src="./assets/images/services/partners/image 8.png" class="w-auto h-[36px] mx-6" />
-            </div>
-            <div class="flex items-center justify-center">
-              <img src="./assets/images/services/partners/image 9.png" class="w-auto h-[72px] mx-6" />
-            </div>
-          </div>
+          </a>
         </div>
-        
-        
+        <div class="col-span-6 md:text-left md:col-span-3">
+          <p class="pb-1">Category</p>
+          <ul class="text-sm">
+            <li class="mb-2">
+              <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Home</a>
+            </li>
+            <li class="mb-2">
+              <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">About</a>
+            </li>
+            <li class="mb-2">
+              <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Services</a>
+            </li>
+            <li class="mb-2">
+              <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Portfolio</a>
+            </li>
+            <li class="mb-2">
+              <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-6 md:text-left md:col-span-3">
+          <p class="pb-2">Contacts</p>
+          <ul class="text-sm">
+            <li class="mb-2">
+              <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600">Una Building, Townsquare Nshama,
+                Al Qudra,
+                Dubai, UAE</a>
+            </li>
+            <li class="mb-2">
+              <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600">+971 52 426 7905</a>
+            </li>
+            <li class="mb-2">
+              <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600">hello@kyte.ae</a>
+            </li>
 
+          </ul>
+        </div>
       </div>
-
-     
-    </section>
-    <!-- class="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-50" -->
-    <footer class="py-6 dark:bg-kt-gray dark:text-gray-900 mt-10" id="contact">
-      <div class="container px-6 mt-6 mx-auto space-y-6 divide-y dark:divide-gray-600 md:space-y-12 divide-opacity-50">
-        <div class="grid grid-cols-12">
-          <div class="pb-6 col-span-full md:pb-0 md:col-span-6">
-            <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 md:justify-start">
-              <div class="flex">
-              <img src="./assets/images/kyte-logo-white.png"  width="140px"/>
-              </div>
-            </a>
-          </div>
-          <div class="col-span-6 md:text-left md:col-span-3">
-            <p class="pb-1">Category</p>
-            <ul class="text-sm">
-              <li class="mb-2">
-                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Home</a>
-              </li>
-              <li class="mb-2">
-                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">About</a>
-              </li>
-              <li class="mb-2">
-                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Services</a>
-              </li>
-              <li class="mb-2">
-                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Portfolio</a>
-              </li>
-              <li class="mb-2">
-                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600 mb-4">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-span-6 md:text-left md:col-span-3">
-            <p class="pb-2">Contacts</p>
-            <ul class="text-sm">
-              <li class="mb-2">
-                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600">Una Building, Townsquare Nshama, Al Qudra,
-                  Dubai, UAE</a>
-              </li>
-              <li class="mb-2">
-                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600">+971 52 426 7905</a>
-              </li>
-              <li class="mb-2">
-                <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-600">hello@kyte.ae</a>
-              </li>
-             
-            </ul>
-          </div>
+      <div class="grid justify-center pt-6 lg:justify-between">
+        <div class="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
+          <span>Copyright © 2024 kyte Digital Marketing</span>
+          <a rel="noopener noreferrer" href="#">
+            <span>Privacy policy</span>
+          </a>
+          <a rel="noopener noreferrer" href="#">
+            <span>Terms of service</span>
+          </a>
         </div>
-        <div class="grid justify-center pt-6 lg:justify-between">
-          <div class="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
-            <span>Copyright © 2024 kyte Digital Marketing</span>
-            <a rel="noopener noreferrer" href="#">
-              <span>Privacy policy</span>
-            </a>
-            <a rel="noopener noreferrer" href="#">
-              <span>Terms of service</span>
-            </a>
-          </div>
-          <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
-            <a rel="noopener noreferrer" href="#" title="Email" class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-kt-purple dark:text-gray-50">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-              </svg>
-            </a>
-            <a rel="noopener noreferrer" href="#" title="Twitter" class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-kt-purple dark:text-gray-50">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="w-5 h-5">
-                <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
-              </svg>
-            </a>
-            <a rel="noopener noreferrer" href="#" title="GitHub" class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-kt-purple dark:text-gray-50">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#fff" fill="none">
-                <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                <path d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z" stroke="currentColor" stroke-width="1.5" />
-                <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
+          <a rel="noopener noreferrer" href="#" title="Email"
+            class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-kt-purple dark:text-gray-50">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
             </svg>
-            </a>
-          </div>
+          </a>
+          <a rel="noopener noreferrer" href="#" title="Twitter"
+            class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-kt-purple dark:text-gray-50">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="w-5 h-5">
+              <path
+                d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+              </path>
+            </svg>
+          </a>
+          <a rel="noopener noreferrer" href="#" title="GitHub"
+            class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-kt-purple dark:text-gray-50">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#fff" fill="none">
+              <path
+                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              <path
+                d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+                stroke="currentColor" stroke-width="1.5" />
+              <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <button id="scroll-to-top"
-        onclick="scrollToTop()"
-        class="scroll-to-top fixed bottom-6 right-6
+  <button id="scroll-to-top" onclick="scrollToTop()" class="scroll-to-top fixed bottom-6 right-6
                    bg-white text-black rounded-lg
                    transition duration-300 hover:bg-gray-100 
                    hover:text-gray-200">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#000000" fill="none">
-            <path d="M9.5 10.5C9.99153 9.9943 11.2998 8 12 8M14.5 10.5C14.0085 9.9943 12.7002 8 12 8M12 8V16" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1" />
-        </svg>
-    </button>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#000000" fill="none">
+      <path d="M9.5 10.5C9.99153 9.9943 11.2998 8 12 8M14.5 10.5C14.0085 9.9943 12.7002 8 12 8M12 8V16"
+        stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path
+        d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+        stroke="currentColor" stroke-width="1" />
+    </svg>
+  </button>
 
-    <!-- HERO END -->
-  </body>
+  <!-- HERO END -->
+</body>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 
-  <script src="./assets/scripts.js"></script>
+<script src="./assets/scripts.js"></script>
 
-  <script>
-    document.getElementById('play-button').addEventListener('click', function () {
-      var modal = document.getElementById('video-modal');
-      var videoPlayer = document.getElementById('video-player');
-      
-      videoPlayer.src = 'https://www.youtube.com/embed/VIDEO_ID?autoplay=1'; // Replace VIDEO_ID with your YouTube video ID
-      modal.classList.remove('hidden');
-    });
+<script>
+  document.getElementById('play-button').addEventListener('click', function () {
+    var modal = document.getElementById('video-modal');
+    var videoPlayer = document.getElementById('video-player');
 
-    document.getElementById('close-modal').addEventListener('click', function () {
-      var modal = document.getElementById('video-modal');
-      var videoPlayer = document.getElementById('video-player');
-      
-      videoPlayer.src = ''; // Stop video playback
-      modal.classList.add('hidden');
-    });
-  </script>
+    videoPlayer.src = 'https://www.youtube.com/embed/VIDEO_ID?autoplay=1'; // Replace VIDEO_ID with your YouTube video ID
+    modal.classList.remove('hidden');
+  });
+
+  document.getElementById('close-modal').addEventListener('click', function () {
+    var modal = document.getElementById('video-modal');
+    var videoPlayer = document.getElementById('video-player');
+
+    videoPlayer.src = ''; // Stop video playback
+    modal.classList.add('hidden');
+  });
+</script>
 
 <script>
   // Function to show popup when the page loads
-  window.onload = function() {
-      document.getElementById('popup').style.display = 'flex';
+  window.onload = function () {
+    document.getElementById('popup').style.display = 'flex';
   };
 
   // Function to close popup when close button is clicked
   function closePopup() {
-      document.getElementById('popup').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
   }
 </script>
 
