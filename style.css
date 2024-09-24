@@ -246,3 +246,11 @@ body {
 }
 
       /*popup */
+
+
+      @media (max-width: 768px) {
+        /* Modal should be visible on small screens */
+        #modal {
+          display: flex;
+        }
+      }
