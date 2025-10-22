@@ -24,6 +24,7 @@
   <!-- swiper CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
   <script>
@@ -976,12 +977,26 @@
   <!-- HERO END -->
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 
 <script src="./assets/scripts.js"></script>
 
+
+ 
+  
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+  });
+</script>
 <script>
   document.getElementById('play-button').addEventListener('click', function () {
     var modal = document.getElementById('video-modal');
@@ -1037,25 +1052,10 @@
   });
 </script>
 
+
+
 <script>
-  // Initialize Swiper
-  const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+
 
   // Modal functionality
   const modal = document.getElementById('workModal');
